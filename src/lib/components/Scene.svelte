@@ -1,27 +1,16 @@
 <script lang="ts">
   import { T } from '@threlte/core'
-  import { ContactShadows, Float, Grid, OrbitControls } from '@threlte/extras'
+  import { ContactShadows, Float, Grid } from '@threlte/extras'
+  import { Bae, Fauna, IRyS, Kronii, Mumei, Sana } from './models';
+	import Player from '$lib/player/player.svelte';
 </script>
-
-<T.PerspectiveCamera
-  makeDefault
-  position={[-10, 10, 10]}
-  fov={15}
->
-  <OrbitControls
-    autoRotate
-    enableZoom={false}
-    enableDamping
-    autoRotateSpeed={0.5}
-    target.y={1.5}
-  />
-</T.PerspectiveCamera>
 
 <T.DirectionalLight
   intensity={0.8}
   position.x={5}
   position.y={10}
 />
+
 <T.AmbientLight intensity={0.2} />
 
 <Grid
@@ -42,17 +31,91 @@
 
 <Float
   floatIntensity={1}
-  floatingRange={[0, 1]}
+  floatingRange={[0, 0.1]}
 >
   <T.Mesh
-    position.y={1.2}
-    position.z={-0.75}
+    position.y={0}
+    position.x={1.25}
+    position.z={-2}
+    scale={3}
   >
-    <T.BoxGeometry />
-    <T.MeshStandardMaterial color="#0059BA" />
+    <Sana />
+    <T.MeshStandardMaterial color="#F85122" />
   </T.Mesh>
 </Float>
 
+<Float
+  floatIntensity={1}
+  floatingRange={[0, 0.1]}
+>
+  <T.Mesh
+    position.y={0}
+    position.x={-1}
+    position.z={-0.75}
+  >
+    <Bae />
+    <T.MeshStandardMaterial color="#F85122" />
+  </T.Mesh>
+</Float>
+
+<Float
+  floatIntensity={1}
+  floatingRange={[0, 0.1]}
+>
+  <T.Mesh
+    position.y={0}
+    position.z={-0.75}
+  >
+    <IRyS />
+    <T.MeshStandardMaterial color="#F85122" />
+  </T.Mesh>
+</Float>
+
+<Float
+  floatIntensity={1}
+  floatingRange={[0, 0.1]}
+>
+  <T.Mesh
+    position.y={0}
+    position.x={1}
+    position.z={-0.75}
+  >
+    <Mumei />
+    <T.MeshStandardMaterial color="#F85122" />
+  </T.Mesh>
+</Float>
+
+<Float
+  floatIntensity={1}
+  floatingRange={[0, 0.1]}
+>
+  <T.Mesh
+    position.y={0}
+    position.x={2}
+    position.z={-0.75}
+  >
+    <Fauna />
+    <T.MeshStandardMaterial color="#F85122" />
+  </T.Mesh>
+</Float>
+
+<Float
+  floatIntensity={1}
+  floatingRange={[0, 0.1]}
+>
+  <T.Mesh
+    position.y={0}
+    position.x={3}
+    position.z={-0.75}
+  >
+    <Kronii />
+    <T.MeshStandardMaterial color="#F85122" />
+  </T.Mesh>
+</Float>
+
+<Player />
+
+<!-- 
 <Float
   floatIntensity={1}
   floatingRange={[0, 1]}
@@ -78,4 +141,4 @@
     <T.IcosahedronGeometry />
     <T.MeshStandardMaterial color="#F8EBCE" />
   </T.Mesh>
-</Float>
+</Float> -->
