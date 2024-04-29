@@ -9,7 +9,7 @@
 	export let position: [x: number, y: number, z: number] = [0, 0, 0];
 	let radius = 0.3;
 	let height = 1.7;
-	export let speed = 3;
+	export let speed = 6;
 
 	let rigidBody: RapierRigidBody;
 	let lock: () => void;
@@ -64,7 +64,7 @@
 				right = 0.2;
 				break;
 			case 'Shift':
-				speed = 6;
+				speed = 3;
 				break;
 			default:
 				break;
@@ -86,7 +86,7 @@
 				right = 0;
 				break;
 			case 'Shift':
-				speed = 3;
+				speed = 6;
 				break;
 			default:
 				break;

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { T } from '@threlte/core'
   import { ContactShadows, Float, Grid } from '@threlte/extras'
-  import { Ame, Bae, Calli, Fauna, Gura, IRyS, Ina, Kiara, Kronii, Mumei, Sana } from './models';
+  import { Ame, AmeTerrarium, Bae, Calli, Fauna, Gura, IRyS, Ina, Kiara, Kronii, Mumei, OuterAme, Sana } from './models';
 	import Player from '$lib/player/player.svelte';
 </script>
 
@@ -11,16 +11,8 @@
   position.y={10}
 />
 
-<T.AmbientLight intensity={0.2} />
 
-<Grid
-  position.y={-0.001}
-  cellColor="#ffffff"
-  sectionColor="#ffffff"
-  sectionThickness={0}
-  fadeDistance={25}
-  cellSize={2}
-/>
+<T.AmbientLight intensity={0.6} />
 
 <ContactShadows
   scale={10}
@@ -188,6 +180,21 @@
   </T.Mesh>
 </Float>
 
+
+
+<T.Group 
+  position.x={-4}
+  position.z={7}>
+  <OuterAme rotation={[0, -Math.PI / 2, 0]} />
+  <T.PointLight position.y={0} position.x={-0.8} position.z={-0.4} color="#FFCC00" distance={10} intensity={5} />
+</T.Group>
+
+<AmeTerrarium 
+  position.y={0.2}
+  position.x={-1}
+  position.z={6}
+  rotation={[0, -Math.PI, 0]}
+/>
 <Player />
 
 <!-- 
