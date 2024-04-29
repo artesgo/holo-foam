@@ -13,7 +13,7 @@
     "format": "prettier --write .",
     "test:integration": "playwright test",
     "test:unit": "vitest",
-    "model-pipeline:run": "node scripts/model-pipeline.js"
+    "convert": "node scripts/model-pipeline.js"
   },
   "devDependencies": {
     "@dimforge/rapier3d-compat": "^0.12.0",

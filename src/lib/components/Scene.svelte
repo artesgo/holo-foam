@@ -1,7 +1,7 @@
 <script lang="ts">
   import { T } from '@threlte/core'
   import { ContactShadows, Float, Grid } from '@threlte/extras'
-  import { Bae, Fauna, IRyS, Kronii, Mumei, Sana } from './models';
+  import { Ame, Bae, Calli, Fauna, Gura, IRyS, Ina, Kiara, Kronii, Mumei, Sana } from './models';
 	import Player from '$lib/player/player.svelte';
 </script>
 
@@ -109,6 +109,81 @@
     position.z={-0.75}
   >
     <Kronii />
+    <T.MeshStandardMaterial color="#F85122" />
+  </T.Mesh>
+</Float>
+
+<Float
+  floatIntensity={1}
+  floatingRange={[0, 0.1]}
+>
+  <T.Mesh
+    position.y={0}
+    position.x={3}
+    position.z={3}
+    rotation={[0, -Math.PI / 2, 0]}
+  >
+    <Ame />
+    <T.MeshStandardMaterial color="#F85122" />
+  </T.Mesh>
+</Float>
+
+<Float
+  floatIntensity={1}
+  floatingRange={[0, 0.1]}
+>
+  <T.Mesh
+    position.y={0}
+    position.x={4}
+    position.z={3}
+    rotation={[0, -Math.PI / 2, 0]}
+  >
+    <Gura />
+    <T.MeshStandardMaterial color="#F85122" />
+  </T.Mesh>
+</Float>
+
+<Float
+  floatIntensity={1}
+  floatingRange={[0, 0.1]}
+>
+  <T.Mesh
+    position.y={0}
+    position.x={5}
+    position.z={3}
+    rotation={[0, -Math.PI / 2, 0]}
+  >
+    <Ina />
+    <T.MeshStandardMaterial color="#F85122" />
+  </T.Mesh>
+</Float>
+
+<Float
+  floatIntensity={1}
+  floatingRange={[0, 0.1]}
+>
+  <T.Mesh
+    position.y={0}
+    position.x={6}
+    position.z={3}
+    rotation={[0, -Math.PI / 2, 0]}
+  >
+    <Kiara />
+    <T.MeshStandardMaterial color="#F85122" />
+  </T.Mesh>
+</Float>
+
+<Float
+  floatIntensity={1}
+  floatingRange={[0, 0.1]}
+>
+  <T.Mesh
+    position.y={0}
+    position.x={7}
+    position.z={3}
+    rotation={[0, -Math.PI / 2, 0]}
+  >
+    <Calli />
     <T.MeshStandardMaterial color="#F85122" />
   </T.Mesh>
 </Float>
